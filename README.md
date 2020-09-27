@@ -4,6 +4,8 @@
 
 제대로 된 예제를 실행하기 위해서는 제 [Github](https://github.com/griffinGC/java_socket_practice) 소스코드를 참고해 주세요
 
+UI 기반으로 된 코드(javafx기반)를 확인하고 싶으시다면 [여기](https://github.com/griffinGC/Java_ChatProgram)를 참고해주세요.
+
 소스코드 실행 순서는 ServerTest -> ClientTest1,2 순서로 실행하시면 cli에서 확인하실 수 있습니다.
 
 ### 동작 방식
