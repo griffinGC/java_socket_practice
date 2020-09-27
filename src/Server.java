@@ -100,12 +100,12 @@ public class Server {
 
                             // 연결되어있는 클라이언트들에게 전송
                             for(ClientManager client : connections){
-                                // 연결되어있는 클라이언트들끼리에게만 보내기 때문에 send 사용
-                                if(client.socket.getRemoteSocketAddress() == socket.getRemoteSocketAddress()){
-                                    System.out.println("[건너뛰기] " + socket.getRemoteSocketAddress());
+                                System.out.println("socket Address :" + client.socket.getRemoteSocketAddress());
+                                if(client.socket.getRemoteSocketAddress().equals(socket.getRemoteSocketAddress())){
                                     continue;
                                 }
                                 System.out.println("데이터 전송");
+                                // 연결되어있는 클라이언트들끼리에게만 보내기 때문에 send 사용
                                 client.send(data);
                             }
                         }

@@ -34,10 +34,8 @@ public class Client {
 
     void receive() {
         // 계속해서 데이터를 받음
-        System.out.println("데이터 받음");
         while(true){
             try{
-                System.out.println("데이터 받음 func");
                 byte[] byteArr = new byte[100];
                 InputStream inputStream = socket.getInputStream();
                 // 받은 데이터를 byteArr에 저장
