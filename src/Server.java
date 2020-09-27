@@ -39,7 +39,8 @@ public class Server {
                 while(true){
                     try {
                         Socket socket = serverSocket.accept();
-                        System.out.println("[연결 대기중]");
+                        System.out.println("[연결 완료] " + socket.getRemoteSocketAddress() + " / " + Thread.currentThread().getName());
+
 
                         ClientManager client = new ClientManager(socket);
                         connections.add(client);
@@ -100,11 +101,9 @@ public class Server {
 
                             // 연결되어있는 클라이언트들에게 전송
                             for(ClientManager client : connections){
-                                System.out.println("socket Address :" + client.socket.getRemoteSocketAddress());
                                 if(client.socket.getRemoteSocketAddress().equals(socket.getRemoteSocketAddress())){
                                     continue;
                                 }
-                                System.out.println("데이터 전송");
                                 // 연결되어있는 클라이언트들끼리에게만 보내기 때문에 send 사용
                                 client.send(data);
                             }

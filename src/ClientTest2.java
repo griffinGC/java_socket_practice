@@ -1,8 +1,7 @@
 import java.util.Scanner;
 
-public class ReceiveTest {
+public class ClientTest2 {
     public static void main(String[] args) {
-//        ReceiveClient receiveClient = new ReceiveClient();
         Scanner sc = new Scanner(System.in);
         Client client = new Client();
         while(true){
